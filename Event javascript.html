@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+    <script>
+        function windowEvent(){
+            alert("HTML Events")
+        }
+        function keypressEvent(){
+            console.log('Enter your name')
+        }
+        function clearvalue(){
+            document.getElementById('username').value='';
+        }
+    </script>
+</head>
+<body onload="windowEvent()">
+    <h1>HTML Events</h1>
+    <h1>Form Events</h1>
+    <form onsubmit="alert('form submitted');return false">
+       Name: <input type="text" onkeypress="keypressEvent()" id="username">
+       <input type="submit">
+       <input type="button" value="clear" onclick="clearvalue()">
+    </form>
+
+</body>
+</html>
