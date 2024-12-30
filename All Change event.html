@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Events</title>
+</head>
+<body>
+    <select id="fruits" onchange="Myfunction">
+        <option>Fruits</option>
+        <option value="Apple">Apple</option>
+        <option value="Orange">Orange</option>
+        <option value="Lemon">Lemon</option>
+    </select>
+</body>
+<script>
+    function Myfunction(){
+        var x=document.getElementById("fruits").value
+    }
+</script>
+</html>

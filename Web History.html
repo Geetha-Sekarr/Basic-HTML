@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histroy back</title>
+</head>
+<body>
+    This is the Home Page<br>
+    <a href="Basic-HTML/Web History2.html">Go to Second Page</a><br>
+    <button onclick="goback()">GO BACK</button><br>
+    <button onclick="goforward()">GO FORWARD</button><br>
+</body>
+<script>
+    function goback(){
+        history.back()
+    }
+    function goforward(){
+        history.forward()
+    }
+</script>
+</html>
