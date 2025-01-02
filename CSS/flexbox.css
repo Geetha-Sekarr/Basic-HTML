@@ -1,0 +1,17 @@
+body{
+    background-color: darkgray;
+}
+.tittlebar{
+    color: black;
+    text-align: center;
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+}
+.container div{
+    width: 200px;
+    color:black;
+    margin: 10px;
+    flex-basis: 20%;
+}
