@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Simple Website</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for header and footer */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+ 
+        .hero {
+            background: url('./icecream1.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+ 
+        .services .card {
+            margin-bottom: 20px;
+        }
+ 
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+ 
+        .footer a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+ 
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Simple Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to My Simple Website</h1>
+            <p>We create beautiful, responsive websites that help your business grow.</p>
+            <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+        </div>
+    </section>
+ 
+    <!-- Services Section -->
+    <section id="services" class="container py-5">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row">
+            <!-- Service 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Web Design</h3>
+                        <p>We design stunning, user-friendly websites that look great on all devices.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Web Development</h3>
+                        <p>We build responsive websites with the latest technologies and best practices.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>SEO Services</h3>
+                        <p>We help you improve your website's search engine ranking and visibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <p>"Great service! My website looks amazing and works perfectly on all devices."</p>
+                        <strong>John Doe</strong>
+                        <p>CEO, Example Corp</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <p>"Very professional team, and the website has generated great leads."</p>
+                        <strong>Jane Smith</strong>
+                        <p>Founder, DigitalCo</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <p>"Wonderful experience. We are very happy with the results!"</p>
+                        <strong>Mark Johnson</strong>
+                        <p>Marketing Director, ShopSmart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p class="text-center">Get in touch with us to start your project today!</p>
+        <div class="text-center">
+            <a href="mailto:info@mysimplewebsite.com" class="btn btn-secondary btn-lg">Contact Us</a>
+        </div>
+    </section>
+ 
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 My Simple Website</p>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">FAQ</a>
+        </div>
+    </footer>
+ 
+    <!-- Bootstrap JS and Popper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+ 
+</body>
+ 
+</html>
