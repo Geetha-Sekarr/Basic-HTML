@@ -55,6 +55,32 @@ function favourite(){
 }
 favourite()
 
+//function parameters
+function add(a,b){
+    console.log(a+b)
+}
+add(10,20)
 
+function area(length,breadth){
+    console.log(length*breadth)
+}
+area(20,30)
 
+//function return type
+function myname(){
+    return "Geetha"
+}
+let abc=myname()
+console.log(abc)
+
+//add return type
+function add(a,b){
+    return (a+b)
+}
+var d=add(20,30)
+console.log(d)
+
+const g=15
+g=10;
+console.log(g);
 

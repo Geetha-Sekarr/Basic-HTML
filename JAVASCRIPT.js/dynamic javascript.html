@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text">
+        <button id="very">Add More</button>
+    </div>
+    <script>
+        var a=document.querySelector("#very");
+        a.onclick=function(){
+            var div=document.createElement("div")
+            div.innerHTML=generateit();
+            document.getElementById("box").appendChild(div);
+        }
+        function generateit(){
+            return"<input type='text'><button>Remove</button>";
+        }
+
+    </script>
+    
+</body>
+</html>
