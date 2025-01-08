@@ -1,0 +1,4 @@
+let expiryDate = new Date();
+expiryDate.setMinutes(expiryDate.getMinutes() + 30); // Cookie expires in 30 minutes
+
+document.cookie = "user=JohnDoe; expires=" + expiryDate.toUTCString();
