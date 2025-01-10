@@ -3,20 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histroy back</title>
+    <title>History API - PushState Example</title>
 </head>
 <body>
-    This is the Home Page<br>
-    <a href="Basic-HTML/Web History2.html">Go to Second Page</a><br>
-    <button onclick="goback()">GO BACK</button><br>
-    <button onclick="goforward()">GO FORWARD</button><br>
+    <h1>History API - PushState Example</h1>
+
+    <div id="content">
+        <p>Welcome to the Home Page</p>
+        <button onclick="goToPage('about')">Go to About Page</button>
+        <button onclick="goToPage('contact')">Go to Contact Page</button>
+        <button onclick="goBack()">Go Back</button>
+        <button onclick="goForward()">Go Forward</button>
+    </div>
+
+    <script>
+        // Function to simulate navigation using pushState
+        function goToPage(page) {
+            // Set the state to be added in the history
+            let state = { page: page };
+            
+            // Update the browser's URL without reloading the page
+            let url = `${page}.html`; // For example, 'about.html', 'contact.html'
+            history.pushState(state, page.charAt(0).toUpperCase() + page.slice(1) + " Page", url);
+
+            // Update content based on the page navigated to
+            updatePageContent(page);
+        }
+
+        // Function to handle content change when navigating to different pages
+        function updatePageContent(page) {
+            let content = document.getElementById('content');
+
+            if (page === 'about') {
+                content.innerHTML = "<h2>About Us</h2><p>This is the About page.</p>";
+            } else if (page === 'contact') {
+                content.innerHTML = "<h2>Contact Us</h2><p>This is the Contact page.</p>";
+            } else {
+                content.innerHTML = "<h2>Welcome to the Home Page</h2><p>This is the Home page.</p>";
+            }
+        }
+
+        // Function to navigate back in history
+        function goBack() {
+            history.back();
+        }
+
+        // Function to navigate forward in history
+        function goForward() {
+            history.forward();
+        }
+
+        // Handle popstate event to manage the state when the user navigates back or forward
+        window.onpopstate = function(event) {
+            if (event.state) {
+                // Update content based on the state (page)
+                updatePageContent(event.state.page);
+            }
+        }
+    </script>
 </body>
-<script>
-    function goback(){
-        history.pushState({})
-    }
-    function goforward(){
-        history.forward()
-    }
-</script>
 </html>

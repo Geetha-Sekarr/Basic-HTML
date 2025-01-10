@@ -5,3 +5,5 @@ if(rain){
 else{
     console.log("Enjoy the sunshine")
 }
+
+myname="geetha"
