@@ -80,7 +80,18 @@ function add(a,b){
 var d=add(20,30)
 console.log(d)
 
-const g=15
-g=10;
-console.log(g);
 
+myName = "geethasekar";
+
+function logName() {
+  console.log(myName);
+}
+
+logName();
+
+var myName;
+
+
+//constant variable
+const age=22;
+console.log(age);

@@ -3,15 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web History2</title>
+    <title>History API Example</title>
 </head>
 <body>
-    <h2>This is the First Page</h2>
-    <button onclick="homepage()">Click Me</button><br>
-</body>
+    <h1>History API Example</h1>
+    <button id="pushStateBtn">Push State</button>
+    <button id="replaceStateBtn">Replace State</button>
+    <button id="goBackBtn">Go Back</button>
+    <button id="goForwardBtn">Go Forward</button>
+    <p id="currentState">Current URL: <span id="urlDisplay">/</span></p>
+
     <script>
-        function homepage(){
-            history.go(-1)
+        function updateUrlDisplay() {
+            document.getElementById('urlDisplay').textContent = window.location.pathname;
         }
+        document.getElementById('pushStateBtn').addEventListener('click', () => {
+            history.pushState({ page: "newPage" }, "New Page", "/newPage");
+            updateUrlDisplay();
+        });
+
+        document.getElementById('replaceStateBtn').addEventListener('click', () => {
+            history.replaceState({ page: "replacedPage" }, "Replaced Page", "/replacedPage");
+            updateUrlDisplay();
+        });
+
+        document.getElementById('goBackBtn').addEventListener('click', () => {
+            history.back();
+        });
+
+        document.getElementById('goForwardBtn').addEventListener('click', () => {
+            history.forward();
+        });
+
+        window.addEventListener('popstate', (event) => {
+            console.log("Current state:", event.state);
+            updateUrlDisplay();
+        });
     </script>
+</body>
 </html>
