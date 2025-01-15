@@ -29,3 +29,17 @@ console.log(s2.lastIndexOf("Hello"))
 //match()
 console.log(s2.match(/Hello/g));
 
+
+//Arrow functions
+let add = (a, b) => a + b;
+console.log(add(3, 2));
+
+//default parameters
+const g = ( x, y, z = 30 ) => {
+    console.log( x + " " + y + " " + z);
+}
+g( 10, 20 );
+
+//Single parameters
+const square = x => x*x;
+console.log(square(4));

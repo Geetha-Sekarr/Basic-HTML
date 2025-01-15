@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p id="prototype"></p>
+
+<script>
+function Person(first, last) {
+  this.firstName = first;
+  this.lastName = last;
+}
+
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName
+};
+
+const myFather = new Person("Geetha", "sekar");
+document.getElementById("prototype").innerHTML = "My father is " + myFather.name();  
+</script>
+
+</body>
+</html>
+
+//Array.prototype.myUcase = function() {
+    for (let i = 0; i < this.length; i++) {
+      this[i] = this[i].toUpperCase();
+    }
+  };
+  
