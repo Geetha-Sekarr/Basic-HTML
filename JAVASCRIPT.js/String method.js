@@ -43,3 +43,4 @@ g( 10, 20 );
 //Single parameters
 const square = x => x*x;
 console.log(square(4));
+

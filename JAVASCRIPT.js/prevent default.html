@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    Try to check this box: <input type="text" id="myCheckbox">
+    <a id="link" href="https://www.w3schools.com/jsref/event_preventdefault.asp">Prevent</a>
+    
+<script>
+    document.getElementById("link").addEventListener("click", function(event){
+    event.preventDefault()
+    });
+</script>
+
+</body>
+</html>

@@ -18,12 +18,12 @@
             document.getElementById('urlDisplay').textContent = window.location.pathname;
         }
         document.getElementById('pushStateBtn').addEventListener('click', () => {
-            history.pushState({ page: "newPage" }, "New Page", "/newPage");
+            history.pushState({ page: "newPage.html" }, "New Page",'/newPage');
             updateUrlDisplay();
         });
 
         document.getElementById('replaceStateBtn').addEventListener('click', () => {
-            history.replaceState({ page: "replacedPage" }, "Replaced Page", "/replacedPage");
+            history.replaceState({ page: "replacedPage" }, "Replaced Page", '/replacedPage');
             updateUrlDisplay();
         });
 
