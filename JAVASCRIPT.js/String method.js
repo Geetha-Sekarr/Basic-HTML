@@ -44,3 +44,65 @@ g( 10, 20 );
 const square = x => x*x;
 console.log(square(4));
 
+//replace method
+let str = "apple, banana, apple, orange";
+str.replaceAll("apple","geetha");
+
+//filter method
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+console.log(evenNumbers);
+
+//filter normal method
+const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const a = num.filter(num => num > 5);
+console.log(a);
+
+//map method
+const b = [1, 2, 3, 4, 5];
+const c = b.map(number => number * 2);
+console.log(c);
+
+//reduce method
+const h = [1, 2, 3, 4, 5];
+const total = h.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;//accumulator=0 currentvalue=1 =>0+1=1
+  //accumulator=1 currentvalue=2 =>1+2=3
+  //accumulator=3 currentvalue=3 =>3+3=6
+  //accumulator=6 currentvalue=4 =>6+4=10
+}); 
+console.log(total); 
+
+//reduceright array methods
+const strArray = ['a', 'b', 'c', 'd'];
+const reversedStr = strArray.reduceRight((accumulator, currentValue) => {
+  return accumulator + currentValue;
+});
+console.log(reversedStr);
+
+
+//
+const v = [1, 2, 3, 4, 5];
+const sum = numbers.reduceRight((accumulator, currentValue) => {
+  return accumulator + currentValue;
+});
+console.log(sum);
+
+//sort methods
+const d = [5, 3, 8, 1, 2];
+d.sort((a, b) => a - b);
+console.log(d); 
+
+//string order sort methods
+const e=["mango","apple","grapes","kiwi"]
+e.sort();
+console.log(e)
+
+const n = [5, 3, 8, 1, 2];
+n.sort();
+console.log(n); 
+
+function great(lastname){
+  console.log("hello,"+lastname);
+}
+great("geetha");
