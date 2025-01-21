@@ -8,8 +8,8 @@ let original = {
 };
 let deepCopy = JSON.parse(JSON.stringify(original));
 deepCopy.address.city = "geetha";
-console.log(original.address.city); 
-console.log(deepCopy.address.city);
+console.log(original.address); 
+console.log(deepCopy.address);
 
 
 //shallow copy
@@ -23,5 +23,5 @@ let origina = {
 };
 let shallowCopy = Object.assign({}, original);
 shallowCopy.address.city = "sekar";
-console.log(original.address.city);
-console.log(shallowCopy.address.city); 
+console.log(original.address);
+console.log(shallowCopy.address); 
